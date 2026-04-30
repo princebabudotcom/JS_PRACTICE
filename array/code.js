@@ -34,3 +34,19 @@ newArr2.forEach((elem) => {
 });
 
 console.log(count);
+
+// custom map method
+
+const hap = (arr, cb) => {
+  let newArr2 = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    newArr2.push(cb(arr[i]));
+  }
+
+  return newArr2;
+};
+
+const happed = hap(arr, (elem) => elem + 100);
+
+console.log(happed);
